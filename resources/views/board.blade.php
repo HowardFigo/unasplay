@@ -91,7 +91,7 @@
         return false;
     }
 
-    var pusher = new Pusher('3659ccbe0ea163e95d8d', {cluster: 'us2',forceTLS: true });
+    var pusher = new Pusher('3659ccbe0ea163e95d8d', {cluster: 'mt1',forceTLS: true });
     var gamePlayChannel = pusher.subscribe('game-channel-{{$id}}-{{$otherPlayerId}}');
     var gameOverChannel = pusher.subscribe('game-over-channel-{{$id}}-{{$otherPlayerId}}');
     gamePlayChannel.bind('App\\Events\\Play', function(data){

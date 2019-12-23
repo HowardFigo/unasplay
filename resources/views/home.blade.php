@@ -3,7 +3,7 @@
 @section('scripts')
 <script language="javascript">
     var pusher = new Pusher('3659ccbe0ea163e95d8d', {
-      cluster: 'us2',
+      cluster: 'mt1',
       forceTLS: true
     });
     var gamePlayChannel = pusher.subscribe('new-game-channel');
