@@ -94,7 +94,7 @@
     var pusher = new Pusher('83b70f7000ad7616c8af', {cluster: 'mt1',forceTLS: true });
     var gamePlayChannel = pusher.subscribe('game-channel-{{$id}}-{{$otherPlayerId}}');
     var gameOverChannel = pusher.subscribe('game-over-channel-{{$id}}-{{$otherPlayerId}}');
-    gamePlayChannel.bind('App\\Events\\Play', function(data){
+    gamePlayChannel.bind('App\Events\Play', function(data){
         $('#block-' + data.location).removeClass('player-{{$playerType}}').addClass('player-' + data.type);
         $('#block-' + data.location).attr('checked', true);
         $('input[type=radio]').removeAttr('disabled');
