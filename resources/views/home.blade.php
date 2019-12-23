@@ -4,7 +4,7 @@
 <script language="javascript">
     var pusher = new Pusher('83b70f7000ad7616c8af', {cluster: 'mt1', forceTLS: true});
     var gamePlayChannel = pusher.subscribe('new-game-channel');
-    gamePlayChannel.bind('App\Events\NewGame', function(data){
+    gamePlayChannel.bind('App\\Events\\NewGame', function(data){
         if(data.destinationUserId == '{{ $user->id }}'){
             $('#from').html(data.from);
             $('#new-game-form').attr('action', '/board/' + data.gameId);
