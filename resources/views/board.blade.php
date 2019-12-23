@@ -100,7 +100,7 @@
         $('input[type=radio]').removeAttr('disabled');
         $('.profile-username').html('You are next!');
     });
-    gameOverChannel.bind('App\\Events\\GameOver', function(data){
+    gameOverChannel.bind('App\Events\GameOver', function(data){
         $('#block-' + data.location).removeClass('player-{{$playerType}}').addClass('player-' + data.type);
         $('#block-' + data.location).attr('checked', true);
         if(data.result == 'win'){
