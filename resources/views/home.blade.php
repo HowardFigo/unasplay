@@ -2,7 +2,7 @@
 
 @section('scripts')
 <script language="javascript">
-    var pusher = new Pusher('3659ccbe0ea163e95d8d', {
+    var pusher = new Pusher('83b70f7000ad7616c8af', {
       cluster: 'mt1',
       forceTLS: true
     });
