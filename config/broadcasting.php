@@ -38,7 +38,7 @@ return [
             'options' => [
                 'cluster' => ' mt1',
                 'useTLS' => true,
-                'encrypted' => true,
+                'encrypted' => false,
             ],
         ],
 
