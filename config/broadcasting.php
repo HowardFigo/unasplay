@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('BROADCAST_DRIVER', 'pusher'),
+    'default' => env('BROADCAST_DRIVER', 'null'),
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +38,6 @@ return [
             'options' => [
                 'cluster' => ' mt1',
                 'useTLS' => true,
-                'encrypted' => false,
             ],
         ],
 
