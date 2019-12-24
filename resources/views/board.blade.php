@@ -131,7 +131,7 @@
             }
             else{
                 if(result == 'win'){
-                    $('.profile-username').html('You Win!');
+                    $('.profile-username').html('GANASTE CHUPAPINGA!!! TU VIEJA CHERA');
                 }
                 else{
                     $('.profile-username').html('Its a tie!');
