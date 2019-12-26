@@ -131,7 +131,7 @@
             }
             else{
                 if(result == 'win'){
-                    $('.profile-username').html('You win ❤️ & 🍕 ');
+                    $('.profile-username').html(' ✨ SOLID allows to create an effective software, clean and flexible code and allows scalability. ✨ ');
                 }
                 else{
                     $('.profile-username').html('Its a tie!');
