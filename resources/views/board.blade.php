@@ -104,7 +104,7 @@
         $('#block-' + data.location).removeClass('player-{{$playerType}}').addClass('player-' + data.type);
         $('#block-' + data.location).attr('checked', true);
 
-        if(data.type='x'){
+        if(data.type=='x'){
 
         if(data.result == 'win'){
             $('.profile-username').html('SOLID LOSE!');
@@ -116,7 +116,7 @@
 
         }
         
-        if(data.type='o'){
+        if(data.type=='o'){
 
         if(data.result == 'win'){
             $('.profile-username').html('4+1 Loose!');
