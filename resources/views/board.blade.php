@@ -111,12 +111,8 @@
         if(data.result == 'win'){
             $('.profile-username').html('4+1 Loose!');
         }
-        else if(data.result == 'tie'){
-            $('.profile-username').html('Its a tie!');
-        }
         else{
-            $('.profile-username').html(' ✨ SOLID allows to create an effective software, clean and flexible code and allows scalability. ✨ ');
-            
+            $('.profile-username').html('Its a tie!');
         }
         $('#exit-button').show();
 
@@ -127,12 +123,8 @@
         if(data.result == 'win'){
             $('.profile-username').html('SOLID LOSE!');
         }
-        else if(data.result == 'tie'){
-            $('.profile-username').html('Its a tie!');
-        }
         else{
-            $('.profile-username').html(' ✨ 4+1 win ✨ ');
-            
+            $('.profile-username').html('Its a tie!');
         }
         $('#exit-button').show();
 
@@ -142,7 +134,7 @@
         
     });
     $(document).ready(function(){
-        $('input[type=radio]').on('click', function(){
+        $('input[type=radio]').on('click', function(data){
             $('input[type=radio]').attr('disabled', true);
             var result = checkResult();
             if(!result){
@@ -162,6 +154,12 @@
             else{
                 if(result == 'win'){
                     
+                    if(data.type=='x'){
+                    $('.profile-username').html(' ✨ SOLID allows to create an effective software, clean and flexible code and allows scalability. ✨ ');
+                    }
+                    else{
+                        $('.profile-username').html(' ✨ 4+1 win✨ ');
+                    }
                 }
                 else{
                     $('.profile-username').html('Its a tie!');
