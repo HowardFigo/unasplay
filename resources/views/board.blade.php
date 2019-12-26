@@ -152,9 +152,13 @@
                 });
             }
             else{
-                if(data.type=='x'){
                 if(result == 'win'){
+                    if(data.type=='o'){
                     $('.profile-username').html(' ✨ SOLID allows to create an effective software, clean and flexible code and allows scalability. ✨ ');
+                    }
+                    else{
+                        $('.profile-username').html(' ✨ 4+1 win✨ ');
+                    }
                 }
                 else{
                     $('.profile-username').html('Its a tie!');
@@ -173,30 +177,6 @@
                     }
                 });
                 
-                }
-                
-                if(data.type=='o'){
-                    if(result == 'win'){
-                    $('.profile-username').html(' ✨ 4+1 ✨ ');
-                }
-                else{
-                    $('.profile-username').html('Its a tie!');
-                }
-                $('#exit-button').show();
-                $.ajax({
-                    url: '/game-over/{{$nextTurn->game_id}}',
-                    method: 'POST',
-                    data: {
-                        location: $(this).val(),
-                        result: result,
-                        _token: $('input[name=_token]').val()
-                    },
-                    success: function(data){
-                        //
-                    }
-                });
-                
-                }
             }
         });
     });
