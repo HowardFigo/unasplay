@@ -105,6 +105,7 @@
         $('#block-' + data.location).attr('checked', true);
 
 
+           
         if(data.type=='x'){
 
 if(data.result == 'win'){
@@ -112,6 +113,9 @@ if(data.result == 'win'){
 }
 else{
     $('.profile-username').html('Its a tie!');
+}
+$('#exit-button').show();
+
 }
 
         if(data.type=='o'){
@@ -125,10 +129,7 @@ else{
         $('#exit-button').show();
 
         }
-        
-        $('#exit-button').show();
-
-        }
+     
 
         
     });
