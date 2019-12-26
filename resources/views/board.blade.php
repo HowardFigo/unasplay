@@ -131,7 +131,7 @@
             }
             else{
                 if(result == 'win'){
-                    $('.profile-username').html('You win');
+                    $('.profile-username').html('You win ❤️ & 🍕 ');
                 }
                 else{
                     $('.profile-username').html('Its a tie!');
