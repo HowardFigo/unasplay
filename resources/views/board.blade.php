@@ -111,8 +111,12 @@
         if(data.result == 'win'){
             $('.profile-username').html('4+1 Loose!');
         }
-        else{
+        else if(data.result == 'tie'){
             $('.profile-username').html('Its a tie!');
+        }
+        else{
+            $('.profile-username').html(' ✨ SOLID allows to create an effective software, clean and flexible code and allows scalability. ✨ ');
+            
         }
         $('#exit-button').show();
 
@@ -123,8 +127,12 @@
         if(data.result == 'win'){
             $('.profile-username').html('SOLID LOSE!');
         }
-        else{
+        else if(data.result == 'tie'){
             $('.profile-username').html('Its a tie!');
+        }
+        else{
+            $('.profile-username').html(' ✨ 4+1 win ✨ ');
+            
         }
         $('#exit-button').show();
 
