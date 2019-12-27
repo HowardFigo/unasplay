@@ -111,7 +111,7 @@
 
         if(data.type=='x'){
         if(data.result == 'win'){
-            $('.profile-username').html(data.type);
+            $('.profile-username').html('4+1 Lose');
         }
         else{
             $('.profile-username').html('Its a tie!');
@@ -157,7 +157,7 @@
                 if(result == 'win'){
                    
                     
-                    if(data.type== "x"){
+                    if(result.type= "x"){
                     $('.profile-username').html( ' ✨ SOLID allows to create an effective software, clean and flexible code and allows scalability. ✨'  );
                     }
                     else{
