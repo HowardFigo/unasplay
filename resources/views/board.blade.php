@@ -113,7 +113,7 @@
            
         if(data.type=='x'){
 
-        tipo = data.type;
+        tipo = 'x';
 
         if(data.result == 'win'){
             $('.profile-username').html('4+1 Lose!');
@@ -126,7 +126,7 @@
         }
 
         if(data.type=='o'){
-            tipo = data.type;
+            tipo = 'o';
 
         if(data.result == 'win'){
             $('.profile-username').html('SOLID LOSE!');
