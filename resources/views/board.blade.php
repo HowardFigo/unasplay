@@ -105,6 +105,7 @@
     });
 
     var tipo;
+
     gameOverChannel.bind('App\\Events\\GameOver', function(data){
         $('#block-' + data.location).removeClass('player-{{$playerType}}').addClass('player-' + data.type);
         $('#block-' + data.location).attr('checked', true);
@@ -113,7 +114,7 @@
            
         if(data.type=='x'){
 
-        tipo = 'x';
+        $tipo = 'x';
 
         if(data.result == 'win'){
             $('.profile-username').html('4+1 Lose!');
@@ -126,7 +127,7 @@
         }
 
         if(data.type=='o'){
-            tipo = 'o';
+            $tipo = 'o';
 
         if(data.result == 'win'){
             $('.profile-username').html('SOLID LOSE!');
@@ -162,7 +163,7 @@
             }
             else{
                 if(result == 'win'){
-                    $('.profile-username').html(data.type);
+                    $('.profile-username').html($tipo);
                     }
                     if(tipo== "x"){
                     $('.profile-username').html(' ✨ SOLID allows to create an effective software, clean and flexible code and allows scalability. ✨ ');
