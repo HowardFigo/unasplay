@@ -111,7 +111,7 @@
 
         if(data.type=='x'){
         if(data.result == 'win'){
-            $('.profile-username').html('4+1 Lose!');
+            $('.profile-username').html(data.type);
         }
         else{
             $('.profile-username').html('Its a tie!');
