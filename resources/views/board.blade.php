@@ -135,7 +135,7 @@
 
         
     });
-    $(document).ready(function(){
+    $(document).ready(function(data){
         $('input[type=radio]').on('click', function(){
             $('input[type=radio]').attr('disabled', true);
             var result = checkResult();
@@ -157,7 +157,6 @@
             else{
                 if(result == 'win'){
                    
-                    $('.profile-username').html(  data.type);
 
                     if(data.type = "x"){
                     $('.profile-username').html( 'SOLID WIN' );
