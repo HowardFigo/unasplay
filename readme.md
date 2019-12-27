@@ -36,4 +36,4 @@ PUSHER_APP_CLUSTER=
 ## IMAGENES
 
 
-<img src="/imagen/juego.jpg" alt="" style="width:70%;">
+<img src="/imagen/JUEGO.png" alt="" style="width:70%;">
