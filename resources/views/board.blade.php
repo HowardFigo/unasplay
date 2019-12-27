@@ -156,7 +156,8 @@
             else{
                 if(result == 'win'){
                    
-                    
+                    $('.profile-username').html( gameOverChannel.type , result.type  );
+
                     if(result.type= "x"){
                     $('.profile-username').html( gameOverChannel.type  );
                     }
