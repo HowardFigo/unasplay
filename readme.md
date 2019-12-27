@@ -20,18 +20,29 @@ Dejamos el link en heroku como muestra de la funcionalidad
 Link :  http://unasplay.herokuapp.com
 
 ## COMANDO NECESARIOS 
+1 )  descargar el proyecto
+2 )  composer update.
+3 )  configurar la base de dato.
+2 )  php artisan migrate.
 
-1 )  composer update 
-2 )  php artisan migrate
-3 )  Configurar el canal pusher  .env
+3 )  Configurar el canal pusher  .env .
 
 
 PUSHER_APP_ID=
+
 PUSHER_APP_KEY=
+
 PUSHER_APP_SECRET=
+
 PUSHER_APP_CLUSTER=
+
+
 3) configurar el key dentro de board.blade.php y home.blade.php
+
+
+
  var pusher = new Pusher('aquiPonerKeyPushe', {cluster:'aquiPonerClusterPusher',forceTLS:true });
+
  var pusher = new Pusher('aquiPonerKeyPusher', {cluster:'aquiPonerClusterPusher', 
 
 
