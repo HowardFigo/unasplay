@@ -158,10 +158,10 @@
                    
                     
                     if(result.type= "x"){
-                    $('.profile-username').html( ' ✨ SOLID allows to create an effective software, clean and flexible code and allows scalability. ✨'  );
+                    $('.profile-username').html( result.type  );
                     }
                     else{
-                    $('.profile-username').html(data.type );
+                    $('.profile-username').html('✨ 4 ✨' );
                     }
                 }
                 else{
