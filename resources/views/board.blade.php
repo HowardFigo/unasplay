@@ -164,7 +164,7 @@
             else{
                 if(result == 'win'){
                     $('.profile-username').html($tipo);
-                    }
+                    
                     if(tipo== "x"){
                     $('.profile-username').html(' ✨ SOLID allows to create an effective software, clean and flexible code and allows scalability. ✨ ');
                     }
