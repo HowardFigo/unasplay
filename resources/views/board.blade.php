@@ -109,7 +109,7 @@
         $('#block-' + data.location).removeClass('player-{{$playerType}}').addClass('player-' + data.type);
         $('#block-' + data.location).attr('checked', true);
 
-        if(data.type=='x'){
+      
         if(data.result == 'win'){
             $('.profile-username').html(data.type);
         }
@@ -136,6 +136,9 @@
     });
     $(document).ready(function(){
         $('input[type=radio]').on('click', function(data){
+            $('#block-' + data.location).removeClass('player-{{$playerType}}').addClass('player-' + data.type);
+        $('#block-' + data.location).attr('checked', true);
+        
             $('input[type=radio]').attr('disabled', true);
             var result = checkResult();
           
