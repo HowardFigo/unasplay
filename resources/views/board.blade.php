@@ -155,7 +155,8 @@
             else{
                 if(result == 'win'){
                     $('.profile-username').html(gameOverChannel.type);
-                    if( gameOverChannel.type= "x"){
+
+                    if( gamePlayChannel.type= "x"){
                     $('.profile-username').html( 'SOLID WIN' );
                     }
                     else{
