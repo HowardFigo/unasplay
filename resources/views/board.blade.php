@@ -5,11 +5,11 @@
 
     function getMensaje(){
     var aFrases=new Array();
-    aFrases[0]="S : S";
-    aFrases[1]="O : O";
-    aFrases[2]="L : L ";
-    aFrases[3]="I : I";
-    aFrases[3]="D : D";
+    aFrases[0]="S : Single responsibility  🧐 Recuerda que cada clase debe tener una sola responsabilidad, asi evitaremos que las clases realicen tareas que no deberian realizar. 🌟 ";
+    aFrases[1]="O : Open/Closed  👉 Abierto para extension pero cerrado para modificacion, aun que parezca facil, lo complicado es precedir por donde se debe extender y que no tengamos que refactorizar v ";
+    aFrases[2]="L : Liskov substitution 👴 --> 👦  La subclase puede ser sustituida por su superclase ✨";
+    aFrases[3]="I : Interface segregation 👆 Reaprovecha las intefaces en otras clases!! 👊 ";
+    aFrases[4]="D : Dependency inversion  🤟 Los módulos de alto nivel no deberían depender de módulos de bajo nivel. Ambos deberían depender de abstracciones.";
     return(aFrases[Math.floor(Math.random() * aFrases.length)]);
     }
     function checkResult()
