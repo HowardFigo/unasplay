@@ -92,6 +92,92 @@
     }
 
 
+///
+
+
+function tipp (data)
+    {
+        var win = false;
+        // Top Row
+        if(
+            $('#block-1.player-{{$playerType}}:checked').length &&
+            $('#block-2.player-{{$playerType}}:checked').length &&
+            $('#block-3.player-{{$playerType}}:checked').length
+        )
+        {
+            w = data.type;
+        }
+        // Middle Row
+        else if(
+            $('#block-4.player-{{$playerType}}:checked').length &&
+            $('#block-5.player-{{$playerType}}:checked').length &&
+            $('#block-6.player-{{$playerType}}:checked').length
+        )
+        {
+            w = data.type;
+        }
+        // Bottom Row
+        else if(
+            $('#block-7.player-{{$playerType}}:checked').length &&
+            $('#block-8.player-{{$playerType}}:checked').length &&
+            $('#block-9.player-{{$playerType}}:checked').length
+        )
+        {
+            w = data.type;
+        }
+        // Left Col
+        else if(
+            $('#block-1.player-{{$playerType}}:checked').length &&
+            $('#block-4.player-{{$playerType}}:checked').length &&
+            $('#block-7.player-{{$playerType}}:checked').length
+        )
+        {
+            w = data.type;
+        }
+        // Center Col
+        else if(
+            $('#block-2.player-{{$playerType}}:checked').length &&
+            $('#block-5.player-{{$playerType}}:checked').length &&
+            $('#block-8.player-{{$playerType}}:checked').length
+        )
+        {
+            w = data.type;
+        }
+        // Right Col
+        else if(
+            $('#block-3.player-{{$playerType}}:checked').length &&
+            $('#block-6.player-{{$playerType}}:checked').length &&
+            $('#block-9.player-{{$playerType}}:checked').length
+        )
+        {
+            w = data.type;
+        }
+        // Diagonal Left to Right
+        else if(
+                $('#block-1.player-{{$playerType}}:checked').length &&
+                $('#block-5.player-{{$playerType}}:checked').length &&
+                $('#block-9.player-{{$playerType}}:checked').length
+        )
+        {
+            w = data.type;
+        }
+        // Diagonal Right to Left
+        else if(
+                $('#block-3.player-{{$playerType}}:checked').length &&
+                $('#block-5.player-{{$playerType}}:checked').length &&
+                $('#block-7.player-{{$playerType}}:checked').length
+        )
+        {
+            w = data.type;
+        }
+
+        return false;
+    }
+
+
+
+
+//
 
 
     var pusher = new Pusher('83b70f7000ad7616c8af', {cluster:'mt1',forceTLS:true });
@@ -139,9 +225,9 @@
         $('input[type=radio]').on('click', function(){
             $('input[type=radio]').attr('disabled', true);
             var result = checkResult();
-          
+            var tipo = tipp();
             if(!result){
-                $('.profile-username').html(data.type);
+                $('.profile-username').html('Waiting on player 2...');
                 $.ajax({
                     url: '/play/{{$nextTurn->game_id}}',
                     method: 'POST',
@@ -157,7 +243,7 @@
             else{
                 if(result == 'win'){
                     
-                    if( = "x"){
+                    if( tipo = "x"){
                     $('.profile-username').html( 'SOLID WIN' );
                     }
                     else{
