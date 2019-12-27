@@ -21,11 +21,14 @@ Link :  http://unasplay.herokuapp.com
 
 ## COMANDO NECESARIOS 
 1 )  descargar el proyecto
-2 )  composer update.
-3 )  configurar la base de dato.
-2 )  php artisan migrate.
 
-3 )  Configurar el canal pusher  .env .
+2 )  composer update.
+
+3 )  configurar la base de dato.
+
+4 )  php artisan migrate.
+
+5 )  Configurar el canal pusher  .env .
 
 
 PUSHER_APP_ID=
