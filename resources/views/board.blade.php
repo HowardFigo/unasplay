@@ -97,6 +97,7 @@
     var pusher = new Pusher('83b70f7000ad7616c8af', {cluster:'mt1',forceTLS:true });
     var gamePlayChannel = pusher.subscribe('game-channel-{{$id}}-{{$otherPlayerId}}');
     var gameOverChannel = pusher.subscribe('game-over-channel-{{$id}}-{{$otherPlayerId}}');
+
     gamePlayChannel.bind('App\\Events\\Play', function(data){
         $('#block-' + data.location).removeClass('player-{{$playerType}}').addClass('player-' + data.type);
         $('#block-' + data.location).attr('checked', true);
@@ -135,7 +136,7 @@
         
     });
     $(document).ready(function(){
-        $('input[type=radio]').on('click', function(data){
+        $('input[type=radio]').on('click', function(){
             $('input[type=radio]').attr('disabled', true);
             var result = checkResult();
           
@@ -156,10 +157,10 @@
             else{
                 if(result == 'win'){
                    
-                    $('.profile-username').html( gameOverChannel.type , result.type  );
+                    $('.profile-username').html(  data.type);
 
-                    if(result.type= "x"){
-                    $('.profile-username').html( gameOverChannel.type  );
+                    if(data.type = "x"){
+                    $('.profile-username').html( 'SOLID WIN' );
                     }
                     else{
                     $('.profile-username').html('✨ 4 ✨' );
