@@ -81,7 +81,7 @@
                 <div class="title m-b-md">
                     UNAS-Play
                 </div>
-
+                <img src="/imagen/logo-fiss.png" alt="" style="width:150%;">
             
             </div>
         </div>
