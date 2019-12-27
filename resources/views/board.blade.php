@@ -109,7 +109,7 @@
         if(data.type=='x'){
 
         if(data.result == 'win'){
-            $('.profile-username').html('4+1 Loose!');
+            $('.profile-username').html('4+1 Lose!');
         }
         else{
             $('.profile-username').html('Its a tie!');
@@ -137,6 +137,7 @@
         $('input[type=radio]').on('click', function(data){
             $('input[type=radio]').attr('disabled', true);
             var result = checkResult();
+          
             if(!result){
                 $('.profile-username').html('Waiting on player 2...');
                 $.ajax({
@@ -154,7 +155,7 @@
             else{
                 if(result == 'win'){
                     
-                    if(data.type=='x'){
+                    if(data.type == 'x'){
                     $('.profile-username').html(' ✨ SOLID allows to create an effective software, clean and flexible code and allows scalability. ✨ ');
                     }
                     else{
