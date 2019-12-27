@@ -79,10 +79,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
+                    UNASPlay
+                </div>
+                <img src="/imagen/logo-fiis.png" alt="" style="width:100%;">
+                <div class="title m-b-md">
                     Figueroa - Solsol
                 </div>
-                <img src="/imagen/logo-fiis.png" alt="" style="width:120%;">
-            
             </div>
         </div>
     </body>
