@@ -37,4 +37,4 @@ PUSHER_APP_CLUSTER=
 
 ## IMAGENES
 
-<a href="https://ibb.co/2tmDBnL"><img src="https://i.ibb.co/2tmDBnL/JUEGO.png" alt="JUEGO" border="0"></a>
+<a href="https://ibb.co/2tmDBnL"><img src="https://i.ibb.co/DCsxnV6/JUEGO.png" alt="JUEGO" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'>avatar online portugues</a><br />
