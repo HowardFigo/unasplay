@@ -134,7 +134,7 @@
         
     });
     $(document).ready(function(){
-        $('input[type=radio]').on('click', function(data){
+        $('input[type=radio]').on('click', function(){
             $('input[type=radio]').attr('disabled', true);
             var result = checkResult();
           
