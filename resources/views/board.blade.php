@@ -3,6 +3,15 @@
 @section('scripts')
 <script language="JavaScript">
 
+    function getMensaje(){
+    var aFrases=new Array();
+    aFrases[0]="S : S";
+    aFrases[1]="O : O";
+    aFrases[2]="L : L ";
+    aFrases[3]="I : I";
+    aFrases[3]="D : D";
+    return(aFrases[Math.floor(Math.random() * aFrases.length)]);
+    }
     function checkResult()
     {
         var win = false;
@@ -117,6 +126,7 @@
         }
         $('#exit-button').show();
 
+
         }
 
         if(data.type=='o'){
@@ -154,14 +164,9 @@
             }
             else{
                 if(result == 'win'){
-                    $('.profile-username').html(gameOverChannel.type);
 
-                    if( gamePlayChannel.type= "x"){
-                    $('.profile-username').html( 'SOLID WIN' );
-                    }
-                    else{
-                    $('.profile-username').html('✨ 4 ✨' );
-                    }
+                    $('.profile-username').html( getMensaje() );
+                    
                 }
                 else{
                     $('.profile-username').html('Its a tie!');
