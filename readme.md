@@ -37,4 +37,4 @@ PUSHER_APP_CLUSTER=
 
 ## IMAGENES
 
-<p align="center"><img src="https://ibb.co/2tmDBnL"></p>
+<a href="https://ibb.co/2tmDBnL"><img src="https://i.ibb.co/2tmDBnL/JUEGO.png" alt="JUEGO" border="0"></a>
