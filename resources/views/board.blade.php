@@ -136,9 +136,7 @@
     });
     $(document).ready(function(){
         $('input[type=radio]').on('click', function(data){
-            $('#block-' + data.location).removeClass('player-{{$playerType}}').addClass('player-' + data.type);
-      
-
+           
             $('input[type=radio]').attr('disabled', true);
             var result = checkResult();
           
