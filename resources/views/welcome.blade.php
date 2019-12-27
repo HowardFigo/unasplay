@@ -79,9 +79,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    UNAS-Play
+                    Figueroa - Solsol
                 </div>
-                <img src="/imagen/logo-fiss.png" alt="" style="width:150%;">
+                <img src="/imagen/logo-fiis.png" alt="" style="width:120%;">
             
             </div>
         </div>
