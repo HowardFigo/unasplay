@@ -158,7 +158,7 @@
                    
                     
                     if(result.type= "x"){
-                    $('.profile-username').html( result.type  );
+                    $('.profile-username').html( gameOverChannel.type  );
                     }
                     else{
                     $('.profile-username').html('✨ 4 ✨' );
