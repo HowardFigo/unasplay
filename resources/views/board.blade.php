@@ -154,8 +154,8 @@
             }
             else{
                 if(result == 'win'){
-                    
-                    if( gameOverChannel.data.type= "x"){
+                    $('.profile-username').html(gameOverChannel.type);
+                    if( gameOverChannel.type= "x"){
                     $('.profile-username').html( 'SOLID WIN' );
                     }
                     else{
