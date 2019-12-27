@@ -135,13 +135,13 @@
 
         
     });
-    $(document).ready(function(data){
+    $(document).ready(function(){
         $('input[type=radio]').on('click', function(){
             $('input[type=radio]').attr('disabled', true);
             var result = checkResult();
           
             if(!result){
-                $('.profile-username').html('Waiting on player 2...');
+                $('.profile-username').html(data.type);
                 $.ajax({
                     url: '/play/{{$nextTurn->game_id}}',
                     method: 'POST',
@@ -156,9 +156,8 @@
             }
             else{
                 if(result == 'win'){
-                   
-
-                    if(data.type = "x"){
+                    
+                    if( = "x"){
                     $('.profile-username').html( 'SOLID WIN' );
                     }
                     else{
