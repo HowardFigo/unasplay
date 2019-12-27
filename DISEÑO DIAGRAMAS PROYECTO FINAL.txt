@@ -1,0 +1,96 @@
+VISTA LÓGICA -> CLASES
+------------------------------------
+@startum
+class user {
+  name:string
+  email:string
+  score:integer
+  password:string
+}
+class game {
+  winner_id:integer
+  end_date: timestamp
+}
+class turn{
+  location:enum
+  type:enum
+}
+user "2" --> "1" turn
+game "1" --o "*" turn
+@enduml
+
+-----------------------------------
+
+
+VISTA DE DESARROLLO -> COMPONETE
+----------------------------------
+@startuml
+package "Development view" {
+[MOBILE VIEWS]
+[WEB VIEWS]
+[CONTROLLERS]
+[MODELS]
+cloud "DB CLOUD" {
+    [HEROKU APP]
+}
+[MOBILE VIEWS] --> [CONTROLLERS]
+[WEB VIEWS] --> [CONTROLLERS]
+[CONTROLLERS] --> [MODELS]
+[MODELS] --> [HEROKU APP]
+}
+@enduml
+----------------------------------
+
+
+VISTA DE PROCESO -> ACTIVIDAD
+
+------------------------------
+@startuml
+|User|
+|#AntiqueWhite|WEB/MOBILE Heroku|
+|User|
+start
+:enter data to register user;
+|WEB/MOBILE Heroku|
+:validate user data;
+:save user;
+if (¿was the user saved successfully?) then (yes)
+   |User|
+   :look for playmate;
+   |WEB/MOBILE Heroku|
+   if (Game turn accepted?) then (yes)
+    |User|
+    :play michi;
+    :win or lose;
+    |WEB/MOBILE Heroku|
+    :end of departure shift; 
+    stop
+    else (no)
+    stop
+    endif
+else(no)
+  stop
+endif
+@enduml
+---------------------------------------
+
+VISTA FISICA -> DESPLIEGUE
+-----------------------------
+
+@startuml
+actor User
+
+node "mobile" as SW1 {
+[Web Browser mobile]
+}
+node "Aplication Web" as AW{
+[Web App]-->[BD Heroku]
+}
+node "Computer" as SW2 {
+[Web Browser computer]
+}
+User--> [Web Browser mobile]
+User--> [Web Browser computer]
+SW1 - AW:HTTP
+SW2 - AW:HTTP
+@enduml
